@@ -1,0 +1,38 @@
+<!-- <main class="managerMainClass">
+  <div class="toolbar" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="assets/img/logoV.png"
+    />
+    <span>Private Covid-19 Vaccination System</span>
+  </div>
+</main>
+
+<div class="Nav">
+  <a mat-button color="accent" routerLink="/centreAdded" routerLinkActive="active">Create<br>Centre Name</a>
+  <a mat-button color="accent" routerLink="/signupHC" routerLinkActive="active">Sign Up<br>(Healthcare Adminstrator)</a>
+  <a mat-button color="accent" routerLink="/signupP" routerLinkActive="active">Sign Up<br>(Patient)</a>
+</div>
+
+<mat-card>
+  <div class="centre_added_page">
+    <button mat-raised-button class="main-btn" (click)="RegDialog()"
+      [disabled]="cenName.length>0"> Add Centre Name </button>
+
+    <div class="cenName" *ngIf="cenName.length>0">
+      <div *ngFor="let cenName of cenName">
+        <h2> Healthcare Centre Name: {{ cenName.centreName }} </h2>
+        <div class = "centreAddress">
+          <p> Healthcare Centre Address: {{ cenName.centreAddress }}</p>
+        </div>
+      </div>
+    </div>
+    <button type="button" mat-raised-button class="main-btn2" routerLink="/login">Back</button>
+
+    <p *ngIf="Service.getName().length<=0">
+        Please Add the centre name of the healthcare centre.
+      </p>
+
+  </div>
+</mat-card> -->

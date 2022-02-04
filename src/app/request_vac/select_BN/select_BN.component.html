@@ -1,0 +1,29 @@
+<div class="Nav">
+  <a mat-button color="accent" routerLink="/infovac" routerLinkActive="active">Record New<br>Vaccination</a>
+  <a mat-button color="accent" routerLink="/selectBN" routerLinkActive="active">Request Vaccination<br>Appointment</a>
+  <a mat-button color="accent" routerLink="/viewVac" routerLinkActive="active">View Vaccination<br>Information</a>
+</div>
+<br><br>
+<div class="selectBN2" id="selectBN3">
+  <mat-accordion multi="true" *ngIf="vaclists.length>0">
+    <mat-expansion-panel *ngFor="let vaclist of vaclists, let i = index">
+      <mat-expansion-panel-header>
+
+          <p>Vaccine ID: {{vaclist.vacID}}  || Batch Number: {{vaclist.batchNo}}</p>
+
+
+      </mat-expansion-panel-header>
+      <p>Expiry Date: {{vaclist.expiryDate| date:'short'}}</p>
+      <p>Quantity Available: {{vaclist.quantityAvailable}}</p>
+      <p>Status: {{vaclist.status}}</p>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+
+</div>
+
+<div [ngClass]="'VacContainer'" *ngIf="reportvacservice.getVac().length ==0 ">
+  <p>A list of Vaccination Information is empty. Please Add New Vaccination</p>
+</div>
+<button class="button" type="button" mat-raised-button color="primary" routerLink="/requestVac">Back</button>

@@ -1,0 +1,28 @@
+<!-- Toolbar -->
+<main class="managerMainClass" *ngIf="login2">
+
+<div class="login" id="login2">
+
+  <mat-card>
+      <div class="login-header">
+          <h2 mat-card-title> Log In (Healthcare Admin) </h2>
+      </div>
+      <form name="loginForm" ngForm #userForm="ngForm" (submit)="ClickLogin(userForm)">
+          <mat-form-field>
+              <mat-label> Username </mat-label>
+              <input matInput type="text" name="username" ngModel #username="ngModel" required>
+              <mat-error *ngIf="username.invalid" id="unError"> Please enter username </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+              <mat-label> Password </mat-label>
+              <input matInput type="password" name="password" ngModel #password="ngModel" required>
+              <mat-error *ngIf="password.invalid" id="pdError"> Please enter password </mat-error>
+          </mat-form-field>
+          <button type="submit" mat-raised-button class="main-btn"> Login  </button>
+      </form>
+        <button type="button" mat-raised-button class="main-btn2" (click)="ClickSignup()">Sign Up</button>
+        <button type="button" mat-raised-button class="main-btn3" (click)="ClickReqVac()">Request Vac Appointment</button>
+  </mat-card>
+</div>
+</main>
+

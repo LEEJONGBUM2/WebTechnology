@@ -1,0 +1,32 @@
+  <div class="Nav">
+    <a mat-button color="accent" routerLink="/addVac" routerLinkActive="active">Record New<br>Vaccination</a>
+    <a mat-button color="accent" routerLink="/viewVac" routerLinkActive="active">View Vaccination<br>Information</a>
+  </div>
+
+<div class="addvac2" id="addvac3">
+  <mat-card>
+    <form name="vacReport"(submit)="onAddVac(vacReport)" #vacReport="ngForm">
+      <div class="addvac2" id="addvac3"></div>
+          <h2 mat-dialog-title>Add new Vaccination</h2>
+      <mat-form-field>
+          <mat-label>*Batch Number </mat-label>
+          <input matInput type="text" placeholder="e.g. BN1234"  name="batchNo" ngModel required #batchNo="ngModel">
+          <mat-error *ngIf="batchNo.invalid">Please enter BatchNo</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>*Expiry Date</mat-label>
+          <input matInput type="date" placeholder="e.g. 02/10/2021" name="expiryDate" ngModel required #expiryDate="ngModel">
+          <mat-error *ngIf="expiryDate.invalid">Please enter expiryDate</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>*Quantity Available</mat-label>
+          <input matInput type="number" placeholder="e.g.3" name="quantityAvailable" ngModel required #quantityAvailable="ngModel">
+          <mat-error *ngIf="quantityAvailable.invalid">Please enter Qunatity Available</mat-error>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="accent"> Submit  </button>
+
+      <button type="button" mat-raised-button color="primary" routerLink="/selectVac">Back</button>
+    </form>
+  </mat-card>
+</div>
+

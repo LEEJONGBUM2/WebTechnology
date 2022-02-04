@@ -1,0 +1,31 @@
+<div class="Nav">
+  <a mat-button color="accent" routerLink="/infovac" routerLinkActive="active">Record New<br>Vaccination</a>
+  <a mat-button color="accent" routerLink="/viewVac" routerLinkActive="active">View Vaccination<br>Information</a>
+</div>
+
+<br><br>
+
+<div class="vaccineInfolist">
+  <mat-card *ngIf="centrelists.length>0">
+    <h2>View the Centre Name with vaccine info</h2>
+      <table mat-table [dataSource]="vaccineData" matSort >
+          <ng-container matColumnDef="centreName">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Centre Name</th>
+              <td mat-cell *matCellDef="let centrelist">  {{centrelist.centreName}}  </td>
+          </ng-container>
+
+          <ng-container matColumnDef="vacName">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Vaccine Name</th>
+              <td mat-cell *matCellDef="let centrelist">  {{centrelist.vacName}}  </td>
+          </ng-container>
+
+          <ng-container matColumnDef="numOfPendings">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Number of Pending</th>
+              <td mat-cell *matCellDef="let centrelist"> {{numOfPendings}}   </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: tableColumns;"></tr>
+      </table>
+  <button  type="button" mat-raised-button color="accent" routerLink="/selectBatch">View</button>
+  </mat-card>
+</div>

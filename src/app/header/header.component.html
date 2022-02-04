@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+
+  <img
+      width="40"
+      alt="Angular Logo"
+      src="assets/img/logoV.png"
+    />
+  <span>
+    <a routerLink="/loginHC">
+      Private Covid-19 Vaccination System</a>
+  </span>
+
+  <span class = "spacer">
+
+  </span>
+
+  <ul *ngIf="!userIsAuthenticated2">
+    <li *ngIf="!userIsAuthenticated1">
+<!-- if the return is false, the link 'login' is shown -->
+      <a mat-button routerLink="/loginHC" routerLinkActive="mat-accent">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated1">
+<!-- if the return is true(authenticated), the link 'signup' is shown -->
+      <a mat-button routerLink="/signupHC" routerLinkActive="mat-accent" routerLinkActive="mat-accent"(click)="ClickSignup()">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated1">
+      <button mat-button (click)="onLogout()"> Logout </button>
+    </li>
+  </ul>
+  <ul *ngIf="userIsAuthenticated2">
+    <li *ngIf="!userIsAuthenticated2">
+<!-- if the return is false, the link 'login' is shown -->
+      <a mat-button routerLink="/loginHC" routerLinkActive="mat-accent">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated2">
+<!-- if the return is true(authenticated), the link 'signup' is shown -->
+      <a mat-button routerLink="/signupHC" routerLinkActive="mat-accent"(click)="ClickSignup()">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated2">
+      <button mat-button (click)="onLogout()"> Logout </button>
+    </li>
+  </ul>
+</mat-toolbar>
+

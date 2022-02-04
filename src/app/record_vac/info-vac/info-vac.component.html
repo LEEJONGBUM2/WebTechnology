@@ -1,0 +1,23 @@
+<div class="Nav">
+  <a mat-button color="accent" routerLink="/infovac" routerLinkActive="active">Record New<br>Vaccination</a>
+  <a mat-button color="accent" routerLink="/viewVac" routerLinkActive="active">View Vaccination<br>Information</a>
+</div>
+
+<mat-card>
+  <h1> Welcome, {{this.authHcAdmin.username}}</h1>
+  <h2>Main Page of Record New Vac Batch</h2>
+  <div class="info_vac_page">
+    <div class="cenName" *ngIf="cenName.length>0">
+      <div *ngFor="let cenName of cenName">
+        <h2> Healthcare Centre Name: {{ cenName.centreName }} </h2>
+      </div>
+    </div>
+    <button type="button" mat-raised-button color="accent" routerLink="/selectVac">Select Vaccine ID</button>
+    <button type="button" mat-raised-button color="primary" routerLink="/loginHC" (click)="onLogout()">Log Out</button>
+    <p *ngIf="Service.getName().length<=0">
+        Have not yet added new Healthcare Centre Name
+    </p>
+  </div>
+</mat-card>
+
+

@@ -1,0 +1,19 @@
+<!-- Register Test Centre Form -->
+<mat-card>
+  <div class="header">
+    <h2 mat-dialog-title> Create Vaccine Centre Name </h2>
+    <button mat-icon-button mat-dialog-close>&times;</button>
+  </div>
+
+  <mat-dialog-content>
+    <form name="centreForm" #centreForm="ngForm" (submit)="centreCreate(centreForm)">
+      <mat-form-field>
+        <mat-label>Centre Name</mat-label>
+        <input matInput type="text" name="centreName" ngModel #centreName="ngModel" required>
+        <mat-error *ngIf="centreName.invalid"> Please enter a centre name </mat-error>
+      </mat-form-field>
+        <button mat-flat-button color="warn" type="submit"
+        name="createCentre" id="createCentre" > Create </button>
+    </form>
+  </mat-dialog-content>
+</mat-card>

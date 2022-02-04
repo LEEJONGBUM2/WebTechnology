@@ -1,0 +1,39 @@
+<!-- <main class="managerMainClass">
+  <div class="toolbar" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="assets/img/logoV.png"
+    />
+    <span>Private Covid-19 Vaccination System</span>
+  </div>
+</main> -->
+<div class="Nav">
+  <!-- <a mat-button color="accent" routerLink="/addVac" routerLinkActive="active">Record New<br>Vaccination</a> -->
+  <a mat-button color="accent" routerLink="/updateLogin" routerLinkActive="active">Request Vaccination<br>Appointment</a>
+  <!-- <a mat-button color="accent" routerLink="/viewVac" routerLinkActive="active">View Vaccination<br>Information</a> -->
+</div>
+
+<div class="login" id="login2">
+  <mat-card>
+      <div class="login-header">
+          <h2 mat-card-title> Log In (Patient)</h2>
+      </div>
+      <form name="userForm" (submit)="onAddLogin(userForm)" ngForm #userForm="ngForm">
+        <!-- (submit)="login(userForm) -->
+          <mat-form-field>
+              <mat-label> Username (Patient) </mat-label>
+              <input matInput type="text" name="username" ngModel #username="ngModel" required>
+              <mat-error *ngIf="username.invalid" id="unError"> Please enter username </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+              <mat-label> Password </mat-label>
+              <input matInput type="password" name="password" ngModel #password="ngModel" required>
+              <mat-error *ngIf="password.invalid" id="pdError"> Please enter password </mat-error>
+          </mat-form-field>
+          <button type="submit" mat-raised-button color="accent"> Login  </button>
+      </form>
+      <button type="button" mat-raised-button color="primary" routerLink="/batchList">Back</button>
+  </mat-card>
+</div>
+

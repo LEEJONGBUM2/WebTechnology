@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Update Vaccination Appointment</h2>
+<form (submit)="onUpdateStatus(updateStatus)" #updateStatus="ngForm">
+  <mat-dialog-content>
+  <mat-card>
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select #status="ngModel" ngModel required name="status">
+          <mat-option value="confirmed">Confirmed</mat-option>
+          <mat-option value="rejected">Rejected</mat-option>
+      </mat-select>
+      <mat-error *ngIf="status.invalid">Please Choose any Status to updating</mat-error>
+    </mat-form-field>
+<button mat-raised-button color="accent" type="submit">Update Status</button>
+</mat-card>
+</mat-dialog-content>
+</form>

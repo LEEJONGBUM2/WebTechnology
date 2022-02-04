@@ -1,0 +1,26 @@
+<div class="Nav">
+  <a mat-button color="accent" routerLink="/centerList" routerLinkActive="active">Request Vaccination<br>Appointment</a>
+</div>
+<br><br>
+<div class="centerList2" id="centerList3">
+  <h2>Record Vaccine Required</h2><br>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let cenName of cenName">
+      <mat-expansion-panel-header>
+
+          <div class="cenName">
+          Healthcare Centre Name: {{ cenName.centreName }}
+          </div>
+
+      </mat-expansion-panel-header>
+      <div class = "centreAddress">
+      <p>Healthcare Centre Address: {{ cenName.centreAddress }}</p>
+      </div>
+      <a mat-button color="primary" routerLink="/batchList" routerLinkActive="active">Request</a>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <button class="button" type="button" mat-raised-button color="accent" routerLink="/requestVac">Back</button>
+</div>
+<p class="info-text mat-body-1" *ngIf="cenName.length == 0">No List</p>

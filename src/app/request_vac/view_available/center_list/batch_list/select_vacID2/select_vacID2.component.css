@@ -1,0 +1,62 @@
+.Nav {
+  padding: auto 1px auto 1px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Nav a.active {
+  box-shadow: inset 0px 3px 1px rgb(63, 65, 70);
+}
+
+.toolbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+mat-card {
+  margin-top: 5rem;
+  display: grid;
+}
+
+mat-card button {
+  float: right;
+  margin: 0.5rem 1rem auto auto;
+}
+
+.VacInfo {
+  text-align: left;
+  width: 85%;
+}
+
+.main-btn {
+  color: white;
+  margin: auto 2rem auto 0.5rem;
+  background-color: rgb(62, 65, 49);
+  width: 50%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+}
+
+.selectBatch2 {
+  margin: auto;
+  width: 75%;
+}
+
+.VacContainer {
+  text-align: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,61 @@
+.Nav {
+  padding: auto 1px auto 1px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Nav a.active {
+  box-shadow: inset 0px 3px 1px rgb(63, 65, 70);
+}
+
+.toolbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+mat-card {
+  width: 80%;
+  margin: 1rem auto;
+  margin-top: 15%;
+  margin-left: 55%;
+  display: grid;
+}
+
+mat-card button {
+  float: right;
+  margin: 0.5rem 1rem auto auto;
+}
+
+mat-form-field {
+  width: 100%;
+}
+.login2 {
+  margin: 0.5rem 1rem auto auto;
+  width: 85%;
+}
+
+.login {
+  /* position: absolute; */
+  margin-top: 60px;
+
+  margin: auto 1rem auto 0.5rem;
+  width: 50%;
+}
+
+.login-header h2 {
+  text-align: center;
+}

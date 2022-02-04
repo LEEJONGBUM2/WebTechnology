@@ -1,0 +1,25 @@
+mat-card {
+  padding: 1rem 1rem;
+  display: grid;
+}
+
+.header h2 {
+  font-size: 22px;
+  text-align: center;
+}
+
+.header button {
+  font-size: 22px;
+  margin: -3.5rem 0 auto auto;
+}
+
+mat-form-field,
+input {
+  width: 100%;
+}
+
+button {
+  display: block;
+  float: right;
+  margin-bottom: 3px;
+}

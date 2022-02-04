@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Select Vaccination Appoinment Date</h2>
+<form (submit)="onUpdateDate(updateDate)" #updateDate="ngForm">
+  <mat-dialog-content>
+  <mat-card>
+    <mat-form-field>
+      <mat-label>*Appointment Date</mat-label>
+      <input matInput type="date" placeholder="e.g. 02/10/2021" name="appointmentDate" ngModel required #expiryDate="ngModel">
+      <mat-error *ngIf="expiryDate.invalid">Please enter Appointment Date</mat-error>
+  </mat-form-field>
+
+<button mat-raised-button color="accent" type="submit">Select Appointment Date</button>
+</mat-card>
+</mat-dialog-content>
+</form>

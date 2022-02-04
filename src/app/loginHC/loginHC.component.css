@@ -1,0 +1,81 @@
+.toolbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 0px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.login {
+  position: absolute;
+  margin-top: 60px;
+
+  margin: auto 1rem auto 0.5rem;
+  width: 50%;
+}
+
+mat-card {
+  width: 80%;
+  margin: 1rem auto;
+  margin-top: 15%;
+  margin-left: 55%;
+  display: grid;
+}
+
+.login-header h2 {
+  text-align: center;
+}
+
+mat-card button {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+form mat-form-field {
+  width: 100%;
+}
+
+.managerMainClass {
+  width: 100%;
+  padding: auto 20px auto 20px;
+  margin: auto;
+}
+
+.main-btn {
+  color: white;
+  margin: auto;
+  background-color: rgb(63, 202, 45);
+  width: 50%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}
+
+.main-btn2 {
+  color: white;
+  margin: auto;
+  background-color: rgb(156, 63, 144);
+  width: 50%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}
+
+.main-btn3 {
+  color: white;
+  margin: auto;
+  background-color: rgb(199, 202, 45);
+  width: 50%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}

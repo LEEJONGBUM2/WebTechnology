@@ -1,0 +1,67 @@
+<div class="Nav">
+  <a mat-button color="accent" routerLink="/signupHC" routerLinkActive="active">Sign Up<br>(Healthcare Adminstrator)</a>
+  <a mat-button color="accent" routerLink="/signupP" routerLinkActive="active">Sign Up<br>(Patient)</a>
+</div>
+
+<div class="signupHC" id="signup2HC">
+  <mat-card>
+    <div class="centre_added_page">
+      <button mat-raised-button class="main-btn3" (click)="RegDialog()"
+        [disabled]="cenName.length>0"> Add Centre Name </button>
+        <!-- <pre>
+          center name
+          >>{{cenName}}>>
+        </pre> -->
+      <div class="cenName" *ngIf="cenName.length>0">
+        <div *ngFor="let cenName of cenName">
+          <h2> Healthcare Centre Name: {{ cenName.centreName }} </h2>
+          <div class = "centreAddress">
+            <p> Healthcare Centre Address: {{ cenName.centreAddress }}</p>
+          </div>
+        </div>
+      </div>
+      <p *ngIf="Service.getName().length<=0">
+          Please Add the centre name of the healthcare centre.
+        </p>
+
+    </div>
+  </mat-card>
+
+  <mat-card>
+      <div class="signupHC-header">
+          <h2 mat-card-title> Sign Up (Healthcare Adminstrator) </h2>
+      </div>
+      <form name="signupHCForm" (submit)="onAddHC(signupHCForm)"  ngForm #signupHCForm="ngForm">
+
+          <mat-form-field>
+              <mat-label> Username </mat-label>
+              <input matInput type="text" name="username" ngModel #username="ngModel" required>
+              <mat-error *ngIf="username.invalid" id="unError">Please enter username</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+              <mat-label> Password </mat-label>
+              <input matInput type="password" name="password" ngModel #password="ngModel" required>
+              <mat-error *ngIf="password.invalid" id="pdError">Please enter password</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label> Full Name </mat-label>
+            <input matInput type="text" name="fullnameHC" ngModel #fullnameHC="ngModel" required>
+            <mat-error *ngIf="fullnameHC.invalid" id="fnError">Please enter fullname</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label> Email </mat-label>
+            <input matInput type="text" name="email" ngModel #email="ngModel" required>
+            <mat-error *ngIf="email.invalid" id="emError">Please enter email</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> staff ID </mat-label>
+          <input matInput type="text" name="staffID" ngModel #staffID="ngModel" required>
+          <mat-error *ngIf="staffID.invalid" id="siError">Please enter staff ID</mat-error>
+      </mat-form-field>
+          <button type="submit" mat-raised-button class="main-btn">Sign Up</button>
+          <button type="button" mat-raised-button class="main-btn2" routerLink="/loginHC">Cancel</button>
+      </form>
+  </mat-card>
+</div>
+
+

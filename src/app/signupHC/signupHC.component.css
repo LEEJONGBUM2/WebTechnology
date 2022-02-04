@@ -1,0 +1,118 @@
+.signupHC {
+  position: absolute;
+  margin-top: 30px;
+
+  margin: auto 2rem auto 0.5rem;
+  width: 50%;
+}
+
+.Nav {
+  padding: auto 1px auto 1px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+.Nav a.active {
+  box-shadow: inset 0px 3px 1px rgb(63, 65, 70);
+}
+
+mat-card {
+  width: 80%;
+  margin: 1rem auto;
+  margin-top: 20px;
+  margin-left: 55%;
+  display: grid;
+}
+
+.signupHC-header h2 {
+  text-align: center;
+}
+
+mat-card button {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+form mat-form-field {
+  width: 100%;
+}
+
+mat-toolbar {
+  width: auto;
+  padding: 0;
+  background: linear-gradient(to left, rgb(241, 241, 220), rgb(95, 184, 219));
+  background-repeat: no-repeat;
+}
+
+.toolbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.main-btn {
+  color: white;
+  margin: auto;
+  background-color: rgb(63, 202, 45);
+  width: 50%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}
+
+.main-btn2 {
+  color: white;
+  margin: auto;
+  background-color: rgb(156, 63, 144);
+  width: 50%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}
+
+.main-btn3 {
+  color: white;
+  margin: auto;
+  background-color: rgb(199, 202, 45);
+  width: 50%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}
+
+.VacContainer {
+  text-align: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-expansion-panel {
+  clear: both;
+}
+
+.mat-content {
+  display: flex;
+  align-items: baseline;
+}
+
+mat-expansion-panel-header button {
+  display: none;
+}
+
+mat-expansion-panel-header:hover button {
+  display: inline-block;
+}
+
+.centerList2 {
+  margin: auto;
+  width: 75%;
+}
